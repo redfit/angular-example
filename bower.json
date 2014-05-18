@@ -11,7 +11,8 @@
     "angular-cookies": "1.2.15",
     "angular-sanitize": "1.2.15",
     "angular-route": "1.2.15",
-    "marked": "~0.3.2"
+    "marked": "~0.3.2",
+    "angular-md5": "~0.1.7"
   },
   "devDependencies": {
     "angular-mocks": "1.2.15",
