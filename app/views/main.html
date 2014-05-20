@@ -24,6 +24,7 @@
         <th ng-click="sortBy='renovation_level';reverse=!reverse">改装</th>
         <th ng-click="sortBy='rare';reverse=!reverse">レア度</th>
         <th ng-click="sortBy='note';reverse=!reverse">備考</th>
+        <th ng-click="sortBy='created_at';reverse=!reverse">作成日</th>
       </tr>
 
       <tr ng-repeat="musu in kanmusu | filter:kanmusuFilter | orderBy:sortBy:reverse">
@@ -46,6 +47,7 @@
         <td>{{ musu.renovation_level }}</td>
         <td>{{ musu.rare }}</td>
         <td>{{ musu.note }}</td>
+        <td>{{ musu.created_at | date:'yyyy-mm-dd' }}</td>
       </tr>
     </table>
 </div>
