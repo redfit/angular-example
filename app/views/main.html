@@ -1,11 +1,52 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2 class="active"><span class="glyphicon glyphicon-pencil"></span>インプット</h2>
-    <textarea class="form-control" cols="100" rows="20" ng-model="markdown">
-    </textarea>
-  </div>
-  <div class="col-md-6">
-    <h2 class="active"><span class="glyphicon glyphicon-eye-open"></span>プレビュー</h2>
-    <p class="lead" ng-bind-html="preview"></p>
-  </div>
+
+<div ng-init='kanmusu=[{"aircapacity":12,"antiair":31,"antisubmarine":0,"avoidance":24,"created_at":"2013-08-02T15:03:11+09:00","cuirass":75,"equipment_slots":4,"firepower":82,"id":1,"luck":20,"name":"長門","note":"長門改(図鑑なし)","number":1,"range":3,"rare":6,"renovation_level":30,"scouting":12,"ship_class":"長門型1番艦","ship_type":"戦艦","speed":1,"stamina":80,"synthesis_antiair":1,"synthesis_cuirass":4,"synthesis_firepower":5,"synthesis_torpedo":0,"torpedo":0,"updated_at":"2013-11-24T09:12:52+09:00"},{"aircapacity":12,"antiair":31,"antisubmarine":0,"avoidance":24,"created_at":"2013-08-02T15:03:11+09:00","cuirass":75,"equipment_slots":4,"firepower":82,"id":2,"luck":3,"name":"陸奥","note":"陸奥改(図鑑なし)","number":2,"range":3,"rare":6,"renovation_level":30,"scouting":12,"ship_class":"長門型2番艦","ship_type":"戦艦","speed":1,"stamina":80,"synthesis_antiair":1,"synthesis_cuirass":4,"synthesis_firepower":5,"synthesis_torpedo":0,"torpedo":0,"updated_at":"2013-11-24T09:12:52+09:00"},{"aircapacity":12,"antiair":28,"antisubmarine":0,"avoidance":22,"created_at":"2013-08-02T15:03:11+09:00","cuirass":70,"equipment_slots":4,"firepower":74,"id":3,"luck":15,"name":"伊勢","note":"No.102伊勢改(航戦)","number":3,"range":3,"rare":4,"renovation_level":10,"scouting":10,"ship_class":"伊勢型1番艦","ship_type":"戦艦","speed":1,"stamina":74,"synthesis_antiair":1,"synthesis_cuirass":4,"synthesis_firepower":4,"synthesis_torpedo":0,"torpedo":0,"updated_at":"2013-11-24T09:12:52+09:00"},{"aircapacity":12,"antiair":28,"antisubmarine":0,"avoidance":22,"created_at":"2013-08-02T15:03:11+09:00","cuirass":70,"equipment_slots":4,"firepower":74,"id":4,"luck":15,"name":"日向","note":"No.103日向改(航戦)","number":4,"range":3,"rare":4,"renovation_level":10,"scouting":10,"ship_class":"伊勢型2番艦","ship_type":"戦艦","speed":1,"stamina":74,"synthesis_antiair":1,"synthesis_cuirass":4,"synthesis_firepower":4,"synthesis_torpedo":0,"torpedo":0,"updated_at":"2013-11-24T09:12:52+09:00"},{"aircapacity":9,"antiair":24,"antisubmarine":0,"avoidance":30,"created_at":"2013-08-02T15:03:11+09:00","cuirass":52,"equipment_slots":3,"firepower":63,"id":21,"luck":12,"name":"金剛","note":"金剛改(図鑑なし)","number":21,"range":3,"rare":4,"renovation_level":25,"scouting":13,"ship_class":"金剛型1番艦","ship_type":"戦艦","speed":2,"stamina":63,"synthesis_antiair":1,"synthesis_cuirass":3,"synthesis_firepower":3,"synthesis_torpedo":0,"torpedo":0,"updated_at":"2013-11-24T09:12:52+09:00"},{"aircapacity":9,"antiair":24,"antisubmarine":0,"avoidance":30,"created_at":"2013-08-02T15:03:11+09:00","cuirass":52,"equipment_slots":3,"firepower":63,"id":22,"luck":10,"name":"比叡","note":"比叡改(図鑑なし)","number":22,"range":3,"rare":4,"renovation_level":25,"scouting":13,"ship_class":"金剛型2番艦","ship_type":"戦艦","speed":2,"stamina":63,"synthesis_antiair":1,"synthesis_cuirass":3,"synthesis_firepower":3,"synthesis_torpedo":0,"torpedo":0,"updated_at":"2013-11-24T09:12:52+09:00"},{"aircapacity":9,"antiair":24,"antisubmarine":0,"avoidance":30,"created_at":"2013-08-02T15:03:11+09:00","cuirass":52,"equipment_slots":3,"firepower":63,"id":23,"luck":15,"name":"榛名","note":"榛名改(図鑑なし)","number":23,"range":3,"rare":4,"renovation_level":25,"scouting":13,"ship_class":"金剛型3番艦","ship_type":"戦艦","speed":2,"stamina":63,"synthesis_antiair":1,"synthesis_cuirass":3,"synthesis_firepower":3,"synthesis_torpedo":0,"torpedo":0,"updated_at":"2013-11-24T09:12:52+09:00"},{"aircapacity":9,"antiair":24,"antisubmarine":0,"avoidance":30,"created_at":"2013-08-02T15:03:11+09:00","cuirass":52,"equipment_slots":3,"firepower":63,"id":24,"luck":10,"name":"霧島","note":"霧島改(図鑑なし)","number":24,"range":3,"rare":4,"renovation_level":25,"scouting":13,"ship_class":"金剛型4番艦","ship_type":"戦艦","speed":2,"stamina":63,"synthesis_antiair":1,"synthesis_cuirass":3,"synthesis_firepower":3,"synthesis_torpedo":0,"torpedo":0,"updated_at":"2013-11-24T09:12:52+09:00"},{"aircapacity":12,"antiair":23,"antisubmarine":0,"avoidance":19,"created_at":"2013-08-02T15:03:11+09:00","cuirass":59,"equipment_slots":4,"firepower":74,"id":26,"luck":5,"name":"扶桑","note":"扶桑改(航戦)(図鑑なし)","number":26,"range":3,"rare":3,"renovation_level":20,"scouting":9,"ship_class":"扶桑型1番艦","ship_type":"戦艦","speed":1,"stamina":67,"synthesis_antiair":1,"synthesis_cuirass":3,"synthesis_firepower":4,"synthesis_torpedo":0,"torpedo":0,"updated_at":"2013-11-24T09:12:52+09:00"},{"aircapacity":12,"antiair":23,"antisubmarine":0,"avoidance":19,"created_at":"2013-08-02T15:03:11+09:00","cuirass":59,"equipment_slots":4,"firepower":74,"id":27,"luck":5,"name":"山城","note":"山城改(航戦)(図鑑なし)","number":27,"range":3,"rare":3,"renovation_level":20,"scouting":9,"ship_class":"扶桑型2番艦","ship_type":"戦艦","speed":1,"stamina":67,"synthesis_antiair":1,"synthesis_cuirass":3,"synthesis_firepower":4,"synthesis_torpedo":0,"torpedo":0,"updated_at":"2013-11-24T09:12:52+09:00"},{"aircapacity":28,"antiair":50,"antisubmarine":0,"avoidance":27,"created_at":"2013-08-14T15:13:47+09:00","cuirass":88,"equipment_slots":4,"firepower":96,"id":128,"luck":12,"name":"大和","note":"No.136大和改(戦艦)","number":131,"range":4,"rare":7,"renovation_level":60,"scouting":15,"ship_class":"大和型1番艦","ship_type":"戦艦","speed":1,"stamina":93,"synthesis_antiair":null,"synthesis_cuirass":null,"synthesis_firepower":null,"synthesis_torpedo":null,"torpedo":0,"updated_at":"2013-11-24T09:12:53+09:00"},{"aircapacity":28,"antiair":77,"antisubmarine":0,"avoidance":49,"created_at":"2013-11-24T09:08:21+09:00","cuirass":99,"equipment_slots":4,"firepower":104,"id":136,"luck":13,"name":"大和改","note":"","number":136,"range":4,"rare":7,"renovation_level":0,"scouting":30,"ship_class":"大和型1番艦","ship_type":"戦艦","speed":1,"stamina":96,"synthesis_antiair":null,"synthesis_cuirass":null,"synthesis_firepower":null,"synthesis_torpedo":null,"torpedo":0,"updated_at":"2013-11-24T09:12:53+09:00"},{"aircapacity":28,"antiair":50,"antisubmarine":0,"avoidance":27,"created_at":"2013-11-24T09:08:21+09:00","cuirass":88,"equipment_slots":4,"firepower":96,"id":142,"luck":10,"name":"武蔵","note":"No.148武蔵改(戦艦)","number":143,"range":4,"rare":7,"renovation_level":40,"scouting":16,"ship_class":"大和型2番艦","ship_type":"戦艦","speed":1,"stamina":94,"synthesis_antiair":null,"synthesis_cuirass":null,"synthesis_firepower":null,"synthesis_torpedo":null,"torpedo":0,"updated_at":"2013-11-24T09:12:53+09:00"},{"aircapacity":28,"antiair":60,"antisubmarine":0,"avoidance":27,"created_at":"2013-11-24T09:08:22+09:00","cuirass":92,"equipment_slots":4,"firepower":92,"id":146,"luck":9,"name":"武蔵改","note":"","number":148,"range":4,"rare":7,"renovation_level":0,"scouting":18,"ship_class":"大和型2番艦","ship_type":"戦艦","speed":1,"stamina":97,"synthesis_antiair":null,"synthesis_cuirass":null,"synthesis_firepower":null,"synthesis_torpedo":null,"torpedo":0,"updated_at":"2013-11-24T09:12:53+09:00"},{"aircapacity":12,"antiair":63,"antisubmarine":0,"avoidance":63,"created_at":"2013-11-24T09:08:22+09:00","cuirass":85,"equipment_slots":4,"firepower":90,"id":147,"luck":15,"name":"金剛改二","note":"","number":149,"range":3,"rare":6,"renovation_level":0,"scouting":41,"ship_class":"金剛型1番艦","ship_type":"戦艦","speed":2,"stamina":82,"synthesis_antiair":null,"synthesis_cuirass":null,"synthesis_firepower":null,"synthesis_torpedo":null,"torpedo":0,"updated_at":"2013-11-24T09:12:53+09:00"},{"aircapacity":12,"antiair":65,"antisubmarine":0,"avoidance":67,"created_at":"2013-11-24T09:08:22+09:00","cuirass":79,"equipment_slots":4,"firepower":90,"id":148,"luck":13,"name":"比叡改二","note":"","number":150,"range":3,"rare":6,"renovation_level":0,"scouting":41,"ship_class":"金剛型2番艦","ship_type":"戦艦","speed":2,"stamina":83,"synthesis_antiair":null,"synthesis_cuirass":null,"synthesis_firepower":null,"synthesis_torpedo":null,"torpedo":0,"updated_at":"2013-11-24T09:12:53+09:00"}]'>
+    <h2>艦娘リスト 戦艦編</h2>
+    艦娘Filter: <input type="text" ng-model="kanmusuFilter" />
+    <br /><br />
+    <table class="table table-striped table-hover">
+      <tr>
+        <th ng-click="sortBy='number';reverse=!reverse">番号</th>
+        <th ng-click="sortBy='name';reverse=!reverse">艦名</th>
+        <th ng-click="sortBy='ship_class';reverse=!reverse">艦級</th>
+        <th ng-click="sortBy='ship_type';reverse=!reverse">艦種</th>
+        <th ng-click="sortBy='stamina';reverse=!reverse">耐久</th>
+        <th ng-click="sortBy='firepower';reverse=!reverse">火力</th>
+        <th ng-click="sortBy='cuirass';reverse=!reverse">装甲</th>
+        <th ng-click="sortBy='torpedo';reverse=!reverse">雷装</th>
+        <th ng-click="sortBy='avoidance';reverse=!reverse">回避</th>
+        <th ng-click="sortBy='antiair';reverse=!reverse">対空</th>
+        <th ng-click="sortBy='aircapacity';reverse=!reverse">搭載</th>
+        <th ng-click="sortBy='antisubmarine';reverse=!reverse">対潜</th>
+        <th ng-click="sortBy='speed';reverse=!reverse">速力</th>
+        <th ng-click="sortBy='scouting';reverse=!reverse">索敵</th>
+        <th ng-click="sortBy='range';reverse=!reverse">射程</th>
+        <th ng-click="sortBy='luck';reverse=!reverse">運</th>
+        <th ng-click="sortBy='renovation_level';reverse=!reverse">改装</th>
+        <th ng-click="sortBy='rare';reverse=!reverse">レア度</th>
+        <th ng-click="sortBy='note';reverse=!reverse">備考</th>
+      </tr>
+
+      <tr ng-repeat="musu in kanmusu | filter:kanmusuFilter | orderBy:sortBy:reverse">
+        <td>{{ musu.number }}</td>
+        <td>{{ musu.name }}</td>
+        <td>{{ musu.ship_class }}</td>
+        <td>{{ musu.ship_type }}</td>
+        <td>{{ musu.stamina }}</td>
+        <td>{{ musu.firepower }}</td>
+        <td>{{ musu.cuirass }}</td>
+        <td>{{ musu.torpedo }}</td>
+        <td>{{ musu.avoidance }}</td>
+        <td>{{ musu.antiair }}</td>
+        <td>{{ musu.aircapacity }}</td>
+        <td>{{ musu.antisubmarine }}</td>
+        <td>{{ musu.speed }}</td>
+        <td>{{ musu.scouting }}</td>
+        <td>{{ musu.range }}</td>
+        <td>{{ musu.luck }}</td>
+        <td>{{ musu.renovation_level }}</td>
+        <td>{{ musu.rare }}</td>
+        <td>{{ musu.note }}</td>
+      </tr>
+    </table>
 </div>
+
