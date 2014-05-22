@@ -9,6 +9,8 @@ angular.module('memomemoApp')
       highlight: (code) ->
         hljs.highlightAuto(code).value
     return (input) ->
+      # inputにfilter対象がはいっているので
+      # 変換して返却するだけ
       marked(input)
 
 
