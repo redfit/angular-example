@@ -1,7 +1,9 @@
-How to run the tests:
+* yeomen grunt bowerが必要です。
+* grunt serve で起動します。
 
-1. Start the Selenium server:
-./node_modules/.bin/webdriver-manager start
-
-2. Open a new terminal and run Protractor:
-./node_modules/.bin/protractor protractor.conf.js
+各ブランチにサンプルがあります
+* master markdown preview
+* intro 艦これアプリ
+* custom_filter カスタムフィルターサンプル
+* gravatar gravatarを使ったcustom_directive
+* gravatar_extend 上記custom_directiveの拡張
