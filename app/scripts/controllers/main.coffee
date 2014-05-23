@@ -24,8 +24,8 @@ angular.module('memomemoApp')
       restrict: "E"
       # タグをまるごと入れ替えるかどうか
       replace: true
-      # テンプレート指定
-      template: "<img src='{{ src }}' class=\"thumbnail\"/>"
+      # テンプレート指定(htmlを直接指定出来ます)
+      templateUrl: "views/_gravatar.html"
       # タグとの紐付け
       link: (scope, element, attrs) ->
         hash = md5.createHash(email.toLowerCase())  if angular.isDefined(email) && !(angular.equals(email, null))
